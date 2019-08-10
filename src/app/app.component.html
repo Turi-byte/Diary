@@ -3,9 +3,11 @@
   <h1>
     Personal Diary
   </h1>
-  <ul>
+  <ul style=":none">
     <li *ngFor='let entry of entries'>
-      {{entry}}
+      {{entry.id}}
+      {{entry.title }}
     </li>
   </ul>
+  <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
 </div>
