@@ -1,2 +1,3 @@
 <p>{{entry.description}}</p>
-<button (click)='entryComplete(true)'>Complete</button>
+<p>This entry should be completed in {{ entry.completeDate | dateCount }} days</p>
+<button (click)='entryDelete(true)'>Complete</button>
