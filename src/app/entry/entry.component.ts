@@ -29,6 +29,13 @@ export class EntryComponent implements OnInit {
     }
   }
 
+  addNewEntry(entry){
+    let entryLength = this.entries.length;
+    entry.id= entryLength+1;
+    entry.completeDate = new Date(entry.completeDate)
+    this.entries.push(entry)
+  }
+
   constructor() { }
 
   ngOnInit() {
