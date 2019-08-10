@@ -20,9 +20,12 @@ export class EntryComponent implements OnInit {
     this.entries[index].showDescription =!this.entries[index].showDescription;
   }
 
-  completeEntry(isComplete, index){
+  deleteEntry(isComplete, index){
     if (isComplete){
-      this.entries.splice(index,1);
+      let toDelete = confirm(`Are you sure you want to delete this entry "${this.entries[index].title}"?`)
+      if (toDelete){
+        this.entries.splice(index,1);
+      }
     }
   }
 

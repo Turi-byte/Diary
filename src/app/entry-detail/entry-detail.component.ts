@@ -11,7 +11,7 @@ export class EntryDetailComponent implements OnInit {
   @Input () entry: Entry;
   @Output () isComplete = new EventEmitter<boolean>();
 
-  entryComplete(complete:boolean){
+  entryDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
 

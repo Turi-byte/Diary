@@ -2,15 +2,22 @@
   <h1>
     Personal Diary
   </h1>
-  <ul>
-    <div *ngFor='let entry of entries;let i = index'>
-      <li appStrikethrough>
-        {{entry.id}}
-        {{entry.title }} due on {{entry.completeDate | date | uppercase }}
-      </li>
-      <button (click)='toggleDetails(i)'>Toggle Description</button>
-      <app-entry-detail *ngIf='entry.showDescription' [entry]='entry' (isComplete) = 'completeEntry($event,i)'></app-entry-detail>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let entry of entries;let i = index'>
+        <div>
+          <h4 id={{i}} appStrikethrough>
+            {{entry.id}}
+            {{entry.title }} due on {{entry.completeDate | date | uppercase }}
+          </h4>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+        </div>
+        <div *ngIf='entry.showDescription'>
+          <app-entry-detail [entry]='entry' (isComplete)='deleteEntry($event,i)'></app-entry-detail>
+        </div>
+      </div>
     </div>
-  </ul>
-  <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
+  </div>
+<p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
 </div>
