@@ -1,13 +1,1 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    Personal Diary
-  </h1>
-  <ul style=":none">
-    <li *ngFor='let entry of entries'>
-      {{entry.id}}
-      {{entry.title }}
-    </li>
-  </ul>
-  <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
-</div>
+<app-entry></app-entry>

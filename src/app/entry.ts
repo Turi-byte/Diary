@@ -1,4 +1,5 @@
 export class Entry {
-    id: number;
-    title: string;
+    showDescription: boolean;
+    constructor( pub)
+    description: string;
 }
