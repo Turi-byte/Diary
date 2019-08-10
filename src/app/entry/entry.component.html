@@ -9,7 +9,7 @@
         {{entry.title }}
       </li>
       <button (click)='toggleDetails(i)'>Toggle Description</button>
-      <app-entry-detail *ngIf='entry.showDescription' [entry]='entry'></app-entry-detail>
+      <app-entry-detail *ngIf='entry.showDescription' [entry]='entry' (isComplete) = 'completeEntry($event,i)'></app-entry-detail>
     </div>
   </ul>
   <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>

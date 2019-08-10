@@ -11,10 +11,10 @@ export class EntryDetailComponent implements OnInit {
   @Input () entry: Entry;
   @Output () isComplete = new EventEmitter<boolean>();
 
-  goalComplete(complete:boolean){
+  entryComplete(complete:boolean){
     this.isComplete.emit(complete);
   }
-  
+
   constructor() { }
 
   ngOnInit() {

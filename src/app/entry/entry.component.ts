@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Entry } from '../entry';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'app-entry',
   templateUrl: './entry.component.html',
@@ -17,6 +18,12 @@ export class EntryComponent implements OnInit {
   
   toggleDetails(index){
     this.entries[index].showDescription =!this.entries[index].showDescription;
+  }
+
+  completeEntry(isComplete, index){
+    if (isComplete){
+      this.entries.splice(index,1);
+    }
   }
 
   constructor() { }
