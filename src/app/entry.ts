@@ -1,5 +1,6 @@
 export class Entry {
     showDescription: boolean;
-    constructor( pub)
-    description: string;
+    constructor( public id: number, public title: string, public description: string){
+        this.showDescription=false;
+    }
 }

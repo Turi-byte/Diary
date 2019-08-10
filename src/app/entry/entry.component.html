@@ -3,11 +3,14 @@
     Personal Diary
   </h1>
   <ul>
-    <li *ngFor='let entry of entries'>
-      {{entry.id}}
-      {{entry.title }}
-      <app-entry-detail [entry]='entry'></app-entry-detail>
-    </li>
+    <div *ngFor='let entry of entries;let i = index'>
+      <li>
+        {{entry.id}}
+        {{entry.title }}
+      </li>
+      <button (click)='toggleDetails(i)'>Toggle Description</button>
+      <app-entry-detail *ngIf='entry.showDescription' [entry]='entry'></app-entry-detail>
+    </div>
   </ul>
   <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
 </div>
