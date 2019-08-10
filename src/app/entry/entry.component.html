@@ -4,9 +4,9 @@
   </h1>
   <ul>
     <div *ngFor='let entry of entries;let i = index'>
-      <li>
+      <li appStrikethrough>
         {{entry.id}}
-        {{entry.title }}
+        {{entry.title }} due on {{entry.completeDate | date | uppercase }}
       </li>
       <button (click)='toggleDetails(i)'>Toggle Description</button>
       <app-entry-detail *ngIf='entry.showDescription' [entry]='entry' (isComplete) = 'completeEntry($event,i)'></app-entry-detail>

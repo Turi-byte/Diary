@@ -8,12 +8,12 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class EntryComponent implements OnInit {
   entries:Entry[] = [
-    new Entry(1,'. Going for movies','I was very excited for the new Spider-man movie!'),
-    new Entry(2,'. Ate Lisagna','Lucy made the best lisagna today'),
-    new Entry(3,'. Worked out at Parklands','Going heavy on the bench and the squat!'),
-    new Entry(4,'. Went partying at Jiweke','Party like there aint no tomorrow'),
-    new Entry(5,'. Bike riding in Limuru','Nothing beats the serene view of Limuru'),
-    new Entry(6,'. Presented my project at Moringa','The startup idea looks lucrative')
+    new Entry(1,'. Going for movies','I was very excited for the new Spider-man movie!',new Date(2019,9,9)),
+    new Entry(2,'. Ate Lisagna','Lucy made the best lisagna today',new Date(2019,9,9)),
+    new Entry(3,'. Worked out at Parklands','Going heavy on the bench and the squat!',new Date(2019,9,10)),
+    new Entry(4,'. Went partying at Jiweke','Party like there aint no tomorrow',new Date(2019,10,11)),
+    new Entry(5,'. Bike riding in Limuru','Nothing beats the serene view of Limuru',new Date(2019,6,11)),
+    new Entry(6,'. Presented my project at Moringa','The startup idea looks lucrative',new Date(2019,4,19)),
   ];
   
   toggleDetails(index){

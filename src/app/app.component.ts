@@ -7,7 +7,7 @@ import { Entry } from './entry'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  entries:Entry = [
+  entriesEntry = [
     {id:1, title:'Going for movies'},
     {id:2, title:'Ate Lisagna'},
     {id:3, title:'Worked out at Parklands'},
