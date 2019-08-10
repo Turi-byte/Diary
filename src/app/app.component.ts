@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  diary = 'Had a lovely day';
+  entries:string[];
+  constructor(){
+    this.entries = ['Had a lovely Day,','Watched Hobbs & Shaw,','Ate lisanga']
+  }
 }
