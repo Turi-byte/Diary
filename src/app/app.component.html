@@ -3,5 +3,9 @@
   <h1>
     Personal Diary
   </h1>
- <p>My diary entry today is {{ entry }}</p>
+  <ul>
+    <li *ngFor='let entry of entries'>
+      {{entry}}
+    </li>
+  </ul>
 </div>
