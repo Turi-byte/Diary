@@ -9,6 +9,8 @@ import { EntryDetailComponent } from './entry-detail/entry-detail.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { EntryFormComponent } from './entry-form/entry-form.component';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { EntryFormComponent } from './entry-form/entry-form.component';
     EntryDetailComponent,
     StrikethroughDirective,
     DateCountPipe,
-    EntryFormComponent
+    EntryFormComponent,
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
