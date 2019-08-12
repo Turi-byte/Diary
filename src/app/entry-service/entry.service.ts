@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Entry } from '../entry';
+import { Entries } from '../entries';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,15 @@ import { Entry } from '../entry';
 export class EntryService {
 
   getEntries(){
-    return Entry
+    return Entries
+  }
+
+  getEntry(id){
+    for(let entry of Entries){
+      if(entry.id == id){
+        return entry;
+      }
+    }
   }
 
   constructor() { }

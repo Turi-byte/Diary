@@ -1,3 +1,16 @@
-<p>{{entry.description}}</p>
-<p>This entry should be completed in {{ entry.completeDate | dateCount }} days</p>
-<button (click)='entryDelete(true)' class="btn btn-outline-danger">Delete Entry</button>
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-m-8">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{entry.description}}</h5>
+                <p class="card-text">This entry will be due in {{entry.completeDate|dateCount}} days</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>

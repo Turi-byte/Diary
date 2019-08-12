@@ -1,21 +1,18 @@
 <div>
-  <h1>
-    Personal Diary
-  </h1>
+  <ng-progress></ng-progress>
+  <h1>Personal Diary</h1>  
   <hr>
   <div class="row">
     <div class="col-md-6">
       <div *ngFor='let entry of entries;let i = index'>
         <div>
           <h6 id={{i}} appStrikethrough>
-            {{entry.id}}
+            {{entry.id}}.
             {{entry.title }} due on {{entry.completeDate | date | uppercase }}
           </h6>
-          <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-        </div>
-        <div *ngIf='entry.showDescription'>
-          <app-entry-detail [entry]='entry' (isComplete)='deleteEntry($event,i)'></app-entry-detail>
-        </div>
+          <button (click)='goToUrl(entry.id)' class="btn btn-primary">View Details</button>
+          <button class="btn btn-outline-danger" (click)='deleteEntry(i)'>Delete Entry</button>      
+        </div>        
       </div>
     </div>
     <div class="col-md-6">
@@ -23,4 +20,10 @@
     </div>
   </div>
 <p *ngIf='entries.length > 5'>You've made enough entries to satisfy the minimum</p>
+<div class="row">
+  <blockquote class="blockquote text-center">
+    <p class="mb-0">{{quote.quote}}</p>
+    <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+  </blockquote>
+</div>
 </div>
