@@ -16,10 +16,10 @@ export class EntryComponent implements OnInit {
 
   entries: Entry[];
   alertService: AlertService;
-  quote: Quote;
+  quote:   go    this.router.navigate(['/entries',id])
+Quote;
 
-  goToUrl(id){
-    this.router.navigate(['/entries',id])
+ToUrl(id){
   }
 
   deleteEntry(index){

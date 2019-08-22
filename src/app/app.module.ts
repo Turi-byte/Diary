@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TuriComponent } from './turi/turi.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EntryFormComponent,
     AboutComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TuriComponent
   ],
   imports: [
     BrowserModule,
